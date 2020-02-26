@@ -1,0 +1,25 @@
+{
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Sms77\\Magento2\\": ""
+    }
+  },
+  "config": {
+    "optimize-autoloader": true
+  },
+  "description": "sms77io Magento2 Module",
+  "minimum-stability": "dev",
+  "name": "sms77/magento2",
+  "require": {
+    "php": "^7.0|^7.1|^7.2",
+    "sms77/api": "^1.1.0",
+    "ext-mbstring": "*"
+  },
+  "support": {
+    "email": "support@sms77.io"
+  },
+  "type": "magento2-module"
+}
