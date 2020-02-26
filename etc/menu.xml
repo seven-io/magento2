@@ -1,0 +1,13 @@
+<menu>
+    <add id="Sms77_Api::parent"
+         title="SMS77 API22"
+         module="Sms77_Api" sortOrder="100"
+         resource="Magento_Sales::sales" parent="Magento_Sales::sales"/>
+
+    <add id="Sms77_Api::index"
+         title="Sms77 API Index"
+         module="Sms77_Api" sortOrder="10"
+         action="api/index"
+         resource="Magento_Sales::manage"
+         parent="Sms77_Api::parent"/>
+</menu>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <sms77>
+            <texts>
+                <textOnShipment>Hi {1}. Your Order #{0} has been marked as shipped: {2}. Enjoy!</textOnShipment>
+            </texts>
+        </sms77>
+    </default>
+</config>
