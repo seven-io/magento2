@@ -51,6 +51,22 @@
                     <validate>required-entry validate-length</validate>
                 </field>
             </group>
+
+            <group id="event_on_submit_order" translate="label" type="text" sortOrder="350" showInDefault="1"
+                   showInWebsite="1" showInStore="0">
+                <label>Send After Order Submission</label>
+
+                <field id="enabled" translate="label" type="select" showInDefault="1" canRestore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="text" translate="label,comment" type="text" sortOrder="30"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Message</label>
+                    <validate>required-entry validate-length</validate>
+                </field>
+            </group>
         </section>
     </system>
 </config>

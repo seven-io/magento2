@@ -30,11 +30,6 @@ In the Magento backend, navigate to Marketing.Communications->sms77io and type i
 Do not forget to click on "Save Config".
 
 ### Event-based SMS dispatch at:
+- Order Submission
 - Order Shipment
 - Customer Registration
-
-#### ToDo
-- Add more Events
-- Add Bulk SMS
-- Tests
-- Translation

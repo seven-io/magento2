@@ -12,6 +12,11 @@
                 <enabled>0</enabled>
                 <text>Hi {1}. Your Order #{0} has been marked as shipped: {2}. Enjoy!</text>
             </event_on_shipment>
+
+            <event_on_submit_order>
+                <enabled>0</enabled>
+                <text>Hi {1}. Your Order #{0} has been submitted. Expect to hear from us soon!</text>
+            </event_on_submit_order>
         </sms77>
     </default>
 </config>
