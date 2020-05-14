@@ -2,17 +2,17 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <section id="sms77" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1"
+        <section id="sms77" translate="label" type="text" showInDefault="1" showInWebsite="1"
                  showInStore="1">
             <label>sms77io</label>
             <tab>general</tab>
             <resource>Sms77_Api::settings</resource>
 
-            <group id="general" translate="label,comment" type="text" sortOrder="10" showInDefault="1"
+            <group id="general" translate="label" type="text" showInDefault="1"
                    showInWebsite="1" showInStore="0">
                 <label>General</label>
 
-                <field id="apiKey" translate="label,comment" type="text" sortOrder="30" showInDefault="1"
+                <field id="apiKey" translate="label,comment" type="text" showInDefault="1"
                        showInWebsite="1" showInStore="1">
                     <label>API Key</label>
                     <comment>Get yours now @ https://www.sms77.io/</comment>
@@ -20,7 +20,7 @@
                 </field>
             </group>
 
-            <group id="event_on_shipment" translate="label" type="text" sortOrder="350" showInDefault="1"
+            <group id="event_on_shipment" translate="label" type="text" showInDefault="1"
                    showInWebsite="1" showInStore="0">
                 <label>Send After Shipment</label>
 
@@ -29,14 +29,27 @@
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
 
-                <field id="text" translate="label,comment" type="text" sortOrder="30" showInDefault="1"
+                <field id="text" translate="label,comment" type="text" showInDefault="1" canRestore="1"
                        showInWebsite="1" showInStore="1">
                     <label>Message</label>
                     <validate>required-entry validate-length</validate>
                 </field>
+
+                <field id="receivers" translate="label,comment" type="text"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Additional / Default Receiver(s)</label>
+                    <comment>Separated by comma eg: +49012345,Peter</comment>
+                    <validate>required-entry validate-length</validate>
+                </field>
+
+                <field id="internal" translate="label,comment" type="select" showInDefault="1" canRestore="1">
+                    <label>Internal</label>
+                    <comment>Sends message to receiver(s), but not to the customer.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
             </group>
 
-            <group id="event_on_customer_reg" translate="label" type="text" sortOrder="350" showInDefault="1"
+            <group id="event_on_customer_reg" translate="label" type="text" showInDefault="1"
                    showInWebsite="1" showInStore="0">
                 <label>Send After Customer Registration</label>
 
@@ -45,14 +58,27 @@
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
 
-                <field id="text" translate="label,comment" type="text" sortOrder="30"
+                <field id="text" translate="label,comment" type="text" canRestore="1"
                        showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Message</label>
                     <validate>required-entry validate-length</validate>
                 </field>
+
+                <field id="receivers" translate="label,comment" type="text"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Additional / Default Receiver(s)</label>
+                    <comment>Separated by comma eg: +49012345,Peter</comment>
+                    <validate>required-entry validate-length</validate>
+                </field>
+
+                <field id="internal" translate="label,comment" type="select" showInDefault="1" canRestore="1">
+                    <label>Internal</label>
+                    <comment>Sends message to receiver(s), but not to the customer.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
             </group>
 
-            <group id="event_on_submit_order" translate="label" type="text" sortOrder="350" showInDefault="1"
+            <group id="event_on_submit_order" translate="label" type="text" showInDefault="1"
                    showInWebsite="1" showInStore="0">
                 <label>Send After Order Submission</label>
 
@@ -61,10 +87,23 @@
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
 
-                <field id="text" translate="label,comment" type="text" sortOrder="30"
+                <field id="text" translate="label" type="text" canRestore="1"
                        showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Message</label>
                     <validate>required-entry validate-length</validate>
+                </field>
+
+                <field id="receivers" translate="label,comment" type="text"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Additional / Default Receiver(s)</label>
+                    <comment>Separated by comma eg: +49012345,Peter</comment>
+                    <validate>required-entry validate-length</validate>
+                </field>
+
+                <field id="internal" translate="label,comment" type="select" showInDefault="1" canRestore="1">
+                    <label>Internal</label>
+                    <comment>Sends message to receiver(s), but not to the customer.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
             </group>
         </section>

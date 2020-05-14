@@ -21,11 +21,10 @@ class AfterCustomerRegistration extends BaseObserver {
         $customer = $observer->getEvent()->getCustomer();
 
         $this->send(
-            $customer->getAddresses() ?? [],
-            [
-                $customer->getFirstname(),
-                $customer->getLastname(),
-                $customer->getEmail(),
-            ]);
+            $customer->getAddresses() ?? [], [
+            $customer->getFirstname(),
+            $customer->getLastname(),
+            $customer->getEmail(),
+        ]);
     }
 }

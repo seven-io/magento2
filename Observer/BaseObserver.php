@@ -55,12 +55,27 @@ abstract class BaseObserver implements ObserverInterface {
 
     protected function send(array $addresses, array $placeholders) {
         try {
-            $tpl = $this->getConfigValueByKey("$this->eventName/text");
-            foreach ($placeholders as $k => $v) {
-                $tpl = str_replace('{' . $k . '}', $v, $tpl);
+            $to = $this->getTo($addresses);
+
+            if (!mb_strlen($to)) {
+                $this->logger->info(
+                    'sms77io not texting because of missing phone number.',
+                    [$addresses, $placeholders]);
+                return;
             }
 
-            $to = '';
+            $this->logger->info("sms77io texting SMS $this->eventName",
+                [(new Client($this->apiKey, 'magento2'))
+                    ->sms($to, $this->getReplacedText($placeholders), ['json' => 1])]);
+        } catch (Exception $ex) {
+            $this->logger->debug($ex->getMessage());
+        }
+    }
+
+    private function getTo(array $addresses) {
+        $to = '';
+
+        if (!(bool)$this->getConfigValueByKey("$this->eventName/internal")) {
             foreach ($addresses as $address) {
                 $tel = $address->getTelephone();
 
@@ -74,17 +89,28 @@ abstract class BaseObserver implements ObserverInterface {
                     }
                 }
             }
+        }
 
-            if (!mb_strlen($to)) {
-                $this->logger->info('sms77io not texting because of missing phone number.');
-                return;
+        $receivers = $this->getConfigValueByKey("$this->eventName/receivers") ?? '';
+
+        if (mb_strlen($receivers)) {
+            if (mb_strlen($to)) {
+                $to .= ',';
             }
 
-            $this->logger->info("sms77io texting SMS $this->eventName",
-                [(new Client($this->apiKey, 'magento2'))
-                    ->sms($to, $tpl, ['json' => 1])]);
-        } catch (Exception $ex) {
-            $this->logger->debug($ex->getMessage());
+            $to .= $receivers;
         }
+
+        return $to;
+    }
+
+    private function getReplacedText(array $placeholders) {
+        $tpl = $this->getConfigValueByKey("$this->eventName/text");
+
+        foreach ($placeholders as $k => $v) {
+            $tpl = str_replace('{' . $k . '}', $v, $tpl);
+        }
+
+        return $tpl;
     }
 }
