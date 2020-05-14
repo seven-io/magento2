@@ -31,6 +31,7 @@ Do not forget to click on "Save Config".
 
 ### Event-based SMS dispatch at:
 - Order Shipment
+- Customer Registration
 
 #### ToDo
 - Add more Events

@@ -20,14 +20,34 @@
                 </field>
             </group>
 
-            <group id="texts" translate="label,comment" type="text" sortOrder="20" showInDefault="1"
-                   showInWebsite="1" showInStore="1">
-                <label>Event Messages</label>
+            <group id="event_on_shipment" translate="label" type="text" sortOrder="350" showInDefault="1"
+                   showInWebsite="1" showInStore="0">
+                <label>Send After Shipment</label>
 
-                <field id="textOnShipment" translate="label,comment" type="text" sortOrder="30" showInDefault="1"
+                <field id="enabled" translate="label" type="select" showInDefault="1" canRestore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="text" translate="label,comment" type="text" sortOrder="30" showInDefault="1"
                        showInWebsite="1" showInStore="1">
-                    <label>After Shipment</label>
-                    <comment>Message content on Shipment</comment>
+                    <label>Message</label>
+                    <validate>required-entry validate-length</validate>
+                </field>
+            </group>
+
+            <group id="event_on_customer_reg" translate="label" type="text" sortOrder="350" showInDefault="1"
+                   showInWebsite="1" showInStore="0">
+                <label>Send After Customer Registration</label>
+
+                <field id="enabled" translate="label" type="select" showInDefault="1" canRestore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="text" translate="label,comment" type="text" sortOrder="30"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Message</label>
                     <validate>required-entry validate-length</validate>
                 </field>
             </group>
