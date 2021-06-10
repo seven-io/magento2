@@ -30,8 +30,12 @@
     "name": "sms77/magento2",
     "require": {
         "ext-mbstring": "*",
+        "magento/framework": "*",
         "php": ">=7.3",
         "sms77/api": "v2.4.0"
+    },
+    "require-dev": {
+        "magento/magento-coding-standard": "^6.0"
     },
     "support": {
         "docs": "https://github.com/sms77io/magento2",

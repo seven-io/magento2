@@ -8,6 +8,7 @@ use Magento\Framework\Event\ObserverInterface;
 use Magento\Sales\Model\Order\Address as OrderAddress;
 use Psr\Log\LoggerInterface;
 use Sms77\Api\Client;
+use Sms77\Api\Params\SmsParams;
 
 abstract class BaseObserver implements ObserverInterface {
     /** @var LoggerInterface $logger */
@@ -25,7 +26,8 @@ abstract class BaseObserver implements ObserverInterface {
     /** @var bool $isValid */
     protected $isValid;
 
-    public function __construct(LoggerInterface $logger, ScopeConfigInterface $scopeConfig, string $eventName) {
+    public function __construct(
+        LoggerInterface $logger, ScopeConfigInterface $scopeConfig, string $eventName) {
         $this->logger = $logger;
         $this->scopeConfig = $scopeConfig;
         $this->eventName = $eventName;
@@ -65,8 +67,8 @@ abstract class BaseObserver implements ObserverInterface {
             }
 
             $this->logger->info("sms77io texting SMS $this->eventName",
-                [(new Client($this->apiKey, 'magento2'))
-                    ->sms($to, $this->getReplacedText($placeholders), ['json' => 1])]);
+                [(new Client($this->apiKey, 'magento2'))->smsJson((new SmsParams)
+                        ->setText($this->getReplacedText($placeholders))->setTo($to))]);
         } catch (Exception $ex) {
             $this->logger->debug($ex->getMessage());
         }
