@@ -1,35 +1,43 @@
-<p align="center">
-    <img src="https://www.sms77.io/wp-content/uploads/2019/07/sms77-Logo-400x79.png" alt="" />
-</p>
+![Sms77.io Logo](https://www.sms77.io/wp-content/uploads/2019/07/sms77-Logo-400x79.png "Sms77.io Logo")
 
-# sms77io Module for Magento 2
+# Module for Magento 2
 
 ## Installation
-<figure>
-    <figcaption>Via Composer</figcaption>
-    <ol>
-        <li><code>composer require sms77/magento2</code></li>
-        <li><code>php bin/magento setup:upgrade</code></li>
-        <li><code>php bin/magento setup:di:compile</code></li>
-        <li><code>php bin/magento cache:clean</code></li>
-    </ol>
-</figure>
 
-<figure>
-    <figcaption>Manually</figcaption>
-    <ol>
-        <li>Head over to <a href='https://github.com/sms77io/magento2-module/releases'>Releases</a> and download the latest *.zip package</li>
-        <li>Extract the archive to /app/code</li>
-        <li>Navigate to System->Web Setup Wizard->Component Manager</li>
-        <li>Hover over the "Actions" columnn and click it to press "Enable"</li>
-    </ol>
-</figure>
+*Via Composer*
 
-In both cases, you will need to set your API key in order to send SMS.
-In the Magento backend, navigate to Marketing.Communications->sms77io and type it in.
-Do not forget to click on "Save Config".
+1. `composer require sms77/magento2`
+2. `php bin/magento setup:upgrade`
+3. `php bin/magento setup:di:compile`
+4. `php bin/magento cache:clean`
 
-### Event-based SMS dispatch at:
-- Order Submission
-- Order Shipment
+*Manually*
+
+1. Download the latest [release](https://github.com/sms77io/magento2-module/releases/latest) as *
+   .zip
+2. Extract the archive to `/app/code`
+3. 
+    2.3.6 and below:
+      1. Navigate to `System->Web Setup Wizard->Component Manager`
+      2. Hover over the "Actions" columnn and click it to press "Enable"
+   
+    2.3.7+: 
+      1. `bin/magento module:enable Sms77_Api`
+
+In both cases, you will need to set your API key in order to send SMS. In the Magento
+backend, navigate to `Marketing.Communications->sms77io` and type it in. Do not forget to
+click on "Save Config".
+
+### Functionalities
+
+*Event-based SMS dispatch at:*
+
 - Customer Registration
+- Order Shipment
+- Order Submission
+
+#### Support
+
+Need help? Feel free to [contact us](https://www.sms77.io/en/company/contact).
+
+[![MIT](https://img.shields.io/badge/License-MIT-teal.svg)](LICENSE)
