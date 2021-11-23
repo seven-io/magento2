@@ -1,0 +1,19 @@
+Additional / Default Receiver(s),Zusätzliche- oder Standardempfänger
+API Key,API-Schlüssel
+API is missing.,API-Schlüssel fehlt.
+Enabled,Aktiviert
+Event not enabled.,Ereignis nicht aktiviert.
+General,General
+Get yours now @ https://www.sms77.io/,Gratis erhältlich auf https://www.sms77.io/
+Hi {1}. Your Order #{0} has been marked as shipped: {2}. Enjoy!,Hallo {1}. Ihre Bestellung #{0} wurde als versandt markiert: {2}. Viel Spaß damit!
+Hi {1}. Your Order #{0} has been submitted. Expect to hear from us soon!,Hallo {1}. Ihre Bestellung #{0} wurde übermittelt. Sie werden bald wieder von uns hören!
+Internal,Intern
+Message,Nachricht
+Send After Customer Registration,Versand nach Kundenregistrierung
+Send After Order Submission,Versand nach Bestellübertragung
+Send After Shipment,Versand nach Versand
+"Sends message to receiver(s), but not to the customer.","Nachrichtenversand an Empfängernummern, aber nicht an Kundschaft."
+"Separated by comma eg: +49012345,Peter","Separiert per Komma, bspw. +49012345,Peter"
+sms77 not texting because of missing phone number.,sms77 versendet nicht auf Grund von fehlender Rufnummer.
+sms77 texting SMS,sms77 versendet SMS
+Welcome {0} {1}. Just confirming we got your number right. Is your email {2}?,Willkommen {0} {1}. Wir überprüfen nur ob Ihre Rufnummer korrekt ist. Lautet Ihre E-Mail {2}?

@@ -41,13 +41,13 @@ abstract class BaseObserver implements ObserverInterface {
 
     private function isValid() {
         if (!mb_strlen($this->apiKey)) {
-            $this->logger->info('API is missing.');
+            $this->logger->info(__('API is missing.'));
 
             return false;
         }
 
         if (!(bool)$this->getConfigValueByKey("$this->eventName/enabled")) {
-            $this->logger->info('Event not enabled.');
+            $this->logger->info(__('Event not enabled.'));
 
             return false;
         }
@@ -61,12 +61,12 @@ abstract class BaseObserver implements ObserverInterface {
 
             if (!mb_strlen($to)) {
                 $this->logger->info(
-                    'sms77io not texting because of missing phone number.',
+                    __('sms77 not texting because of missing phone number.'),
                     [$addresses, $placeholders]);
                 return;
             }
 
-            $this->logger->info("sms77io texting SMS $this->eventName",
+            $this->logger->info(__("sms77 texting SMS") . ' ' . $this->eventName,
                 [(new Client($this->apiKey, 'magento2'))->smsJson((new SmsParams)
                         ->setText($this->getReplacedText($placeholders))->setTo($to))]);
         } catch (Exception $ex) {

@@ -1,4 +1,4 @@
-![Sms77.io Logo](https://www.sms77.io/wp-content/uploads/2019/07/sms77-Logo-400x79.png "Sms77.io Logo")
+![sms77 Logo](https://www.sms77.io/wp-content/uploads/2019/07/sms77-Logo-400x79.png "sms77 Logo")
 
 # Module for Magento 2
 
@@ -19,7 +19,7 @@
 3. 
     2.3.6 and below:
       1. Navigate to `System->Web Setup Wizard->Component Manager`
-      2. Hover over the "Actions" columnn and click it to press "Enable"
+      2. Hover over the "Actions" column and click it to press "Enable"
    
     2.3.7+: 
       1. `bin/magento module:enable Sms77_Api`

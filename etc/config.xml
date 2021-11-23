@@ -3,19 +3,19 @@
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
         <sms77>
-            <event_on_customer_reg>
+            <event_on_customer_reg translate="text">
                 <enabled>0</enabled>
                 <internal>0</internal>
                 <text>Welcome {0} {1}. Just confirming we got your number right. Is your email {2}?</text>
             </event_on_customer_reg>
 
-            <event_on_shipment>
+            <event_on_shipment translate="text">
                 <enabled>0</enabled>
                 <internal>0</internal>
                 <text>Hi {1}. Your Order #{0} has been marked as shipped: {2}. Enjoy!</text>
             </event_on_shipment>
 
-            <event_on_submit_order>
+            <event_on_submit_order translate="text">
                 <enabled>0</enabled>
                 <internal>0</internal>
                 <text>Hi {1}. Your Order #{0} has been submitted. Expect to hear from us soon!</text>
