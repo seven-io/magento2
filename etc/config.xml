@@ -2,7 +2,7 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
-        <sms77>
+        <seven>
             <event_on_customer_reg translate="text">
                 <enabled>0</enabled>
                 <internal>0</internal>
@@ -20,6 +20,6 @@
                 <internal>0</internal>
                 <text>Hi {1}. Your Order #{0} has been submitted. Expect to hear from us soon!</text>
             </event_on_submit_order>
-        </sms77>
+        </seven>
     </default>
 </config>

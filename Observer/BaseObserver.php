@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Sms77\Magento2\Observer;
+namespace Seven\Magento2\Observer;
 
 use Exception;
 use Magento\Framework\App\Config\ScopeConfigInterface;
@@ -36,7 +36,7 @@ abstract class BaseObserver implements ObserverInterface {
     }
 
     protected function getConfigValueByKey(string $key) {
-        return $this->scopeConfig->getValue("sms77/$key");
+        return $this->scopeConfig->getValue("seven/$key");
     }
 
     private function isValid() {
@@ -61,12 +61,12 @@ abstract class BaseObserver implements ObserverInterface {
 
             if (!mb_strlen($to)) {
                 $this->logger->info(
-                    __('sms77 not texting because of missing phone number.'),
+                    __('seven not texting because of missing phone number.'),
                     [$addresses, $placeholders]);
                 return;
             }
 
-            $this->logger->info(__("sms77 texting SMS") . ' ' . $this->eventName,
+            $this->logger->info(__("seven texting SMS") . ' ' . $this->eventName,
                 [(new Client($this->apiKey, 'magento2'))->smsJson((new SmsParams)
                         ->setText($this->getReplacedText($placeholders))->setTo($to))]);
         } catch (Exception $ex) {

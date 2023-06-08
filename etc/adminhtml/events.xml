@@ -2,6 +2,6 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
     <event name="sales_order_shipment_save_after">
-        <observer name="sms77_aftershipment" instance="Sms77\Magento2\Observer\AfterShipment"/>
+        <observer name="seven_aftershipment" instance="Seven\Magento2\Observer\AfterShipment"/>
     </event>
 </config>

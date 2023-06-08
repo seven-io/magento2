@@ -2,8 +2,8 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <add id="Sms77_Api::menu" title="sms77" module="Sms77_Api"
+        <add id="Seven_Api::menu" title="seven" module="Seven_Api"
              sortOrder="100" parent="Magento_Backend::marketing_communications"
-             action="adminhtml/system_config/edit/section/sms77" resource="Sms77_Api::settings"/>
+             action="adminhtml/system_config/edit/section/seven" resource="Seven_Api::settings"/>
     </menu>
 </config>

@@ -2,11 +2,11 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <section id="sms77" translate="label" type="text" showInDefault="1" showInWebsite="1"
+        <section id="seven" translate="label" type="text" showInDefault="1" showInWebsite="1"
                  showInStore="1">
-            <label>sms77</label>
+            <label>seven</label>
             <tab>general</tab>
-            <resource>Sms77_Api::settings</resource>
+            <resource>Seven_Api::settings</resource>
 
             <group id="general" translate="label" type="text" showInDefault="1"
                    showInWebsite="1" showInStore="0">
@@ -15,7 +15,7 @@
                 <field id="apiKey" translate="label,comment" type="text" showInDefault="1"
                        showInWebsite="1" showInStore="1">
                     <label>API Key</label>
-                    <comment>Get yours now @ https://www.sms77.io/</comment>
+                    <comment>Get yours now @ https://www.seven.io/</comment>
                     <validate>required-entry validate-length</validate>
                 </field>
             </group>

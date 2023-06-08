@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Sms77\Magento2\Observer;
+namespace Seven\Magento2\Observer;
 
 use Magento\Customer\Model\Data\Customer;
 use Magento\Framework\App\Config\ScopeConfigInterface;

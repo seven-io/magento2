@@ -2,12 +2,12 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
     <event name="customer_register_success">
-        <observer name="sms77-ev-customer_register_success"
-                  instance="Sms77\Magento2\Observer\AfterCustomerRegistration"/>
+        <observer name="seven-ev-customer_register_success"
+                  instance="Seven\Magento2\Observer\AfterCustomerRegistration"/>
     </event>
 
     <event name="checkout_submit_all_after">
-        <observer name="sms77-ev-checkout_submit_all_after"
-                  instance="Sms77\Magento2\Observer\AfterCheckoutSubmitAllAfter"/>
+        <observer name="seven-ev-checkout_submit_all_after"
+                  instance="Seven\Magento2\Observer\AfterCheckoutSubmitAllAfter"/>
     </event>
 </config>
