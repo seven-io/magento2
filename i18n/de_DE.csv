@@ -12,7 +12,7 @@ Message,Nachricht
 Send After Customer Registration,Versand nach Kundenregistrierung
 Send After Order Submission,Versand nach Bestellübertragung
 Send After Shipment,Versand nach Versand
-"Sends message to receiver(s), but not to the customer.","Nachrichtenversand an Empfängernummern, aber nicht an Kundschaft."
+"Sends message to receiver(s), but not to the customer.","Nachrichtenversand an Empfängernummern, aber nicht an den Kunden."
 "Separated by comma eg: +49012345,Peter","Separiert per Komma, bspw. +49012345,Peter"
 seven not texting because of missing phone number.,seven versendet nicht auf Grund von fehlender Rufnummer.
 seven texting SMS,seven versendet SMS

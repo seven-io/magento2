@@ -6,7 +6,7 @@
                  showInStore="1">
             <label>seven</label>
             <tab>general</tab>
-            <resource>Seven_Api::settings</resource>
+            <resource>Seven_Api::config</resource>
 
             <group id="general" translate="label" type="text" showInDefault="1"
                    showInWebsite="1" showInStore="0">
